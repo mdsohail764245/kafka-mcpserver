@@ -1,0 +1,19 @@
+spring:
+  kafka:
+    bootstrap-servers: 10.140.129.31:9092
+  ai:
+    mcp:
+      server:
+        enabled: true
+        name: kafka-mcp
+        version: 1.0.0
+        type: sync
+        sse-message-endpoint: /sse
+server:
+  port: 8081
+
+logging:
+  level:
+    org.springframework.web.reactive: TRACE
+    org.springframework.ai: TRACE
+    org.springframework.boot.autoconfigure: DEBUG
